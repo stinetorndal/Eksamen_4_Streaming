@@ -14,6 +14,11 @@ public class Streaming {
 
     public void startSession() {
 
+        // findMovie("Carrie");
+        // findMovie("Olsenbanden");
+        // playMovie("Olsenbanden");
+        playEpisode("The Office", 1, 5);
+
         System.out.println();
         System.out.println("Velkommen til Streaming");
         String choice = showStartMenu();
@@ -95,6 +100,7 @@ public class Streaming {
                 return;
             }
         }
+        System.out.println("\nFilmen findes ikke\n");
     }
 
     //*********** METODER TIL AT AFSPILLE **********
@@ -105,7 +111,7 @@ public class Streaming {
                 return;
             }
         }
-        System.out.println("Serie ikke fundet " + seriesTitle);
+        System.out.println("Serie ikke fundet: " + seriesTitle);
     }
 
     public void playMovie(String movieTitle){
@@ -116,7 +122,7 @@ public class Streaming {
                 return;
             }
         }
-        System.out.println("Film ikke fundet " + movieTitle);
+        System.out.println("Film ikke fundet: " + movieTitle);
     }
 
 }
